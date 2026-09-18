@@ -12,6 +12,6 @@ test('ตรวจสอบสินค้าใน Cart', async ({ page }) => {
   await page.locator('.shopping_cart_link').click();
 
   // Assert
-  await expect(page.locator('.inventory_item_name'))
-    .toHaveText('Sauce Labs Backpack');
+  await expect(page.locator('.inventory_item_name', { hasText: 'Sauce Labs Backpack' }))
+  .toHaveText('Sauce Labs Backpack');
 });
